@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <title>React Exercise 1</title>
+    <head>
+        Exercise 1 SuperSimpleDev React course
+    </head>
+    <body>
+        <div class="js-container"></div>
+
+        <script src="https://unpkg.com/supersimpledev/react.js"></script>
+        <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+        <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+        <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+        <script type="text/babel">
+            let name = 'Bay Max';
+            let price_sock = 10;
+            let price_tshirt = 8;
+            let productCost = 2* price_tshirt + price_sock;
+            let shippingCost = 5;
+            let date = dayjs().format('MMMM D');
+            let time = dayjs().format('HH:mm:ss');
+            
+            /*
+            const paragraph = <p>Current time: {dayjs().format('HH:mm:ss')}</p>;
+
+      const container = document.querySelector('.js-container');
+      const root = ReactDOM.createRoot(container);
+      root.render(paragraph);
+
+      setInterval(() => {
+        const paragraph = <p>Current time: {dayjs().format('HH:mm:ss')}</p>;
+        root.render(paragraph);
+      }, 1000);
+        */
+
+
+
+            const div = (
+                <div>
+                    <button>Good Job</button>
+                    <p>Hello, I am {name} </p>
+                    <p> COTTON SOCK </p>
+                    <p>Price: ${price_sock}</p>
+                    <p> T-Shirt</p>
+                    <p>Price: ${price_tshirt}</p>
+                    <button>Add to Cart</button>
+                    <p>The final cost of 2 tshirt and one pair of socks is: {productCost}</p>
+                    <p>Product Cost: ${productCost}</p>
+                    <p>Shipping Cost: ${shippingCost}</p>
+                    <p>Total Cost: ${productCost+shippingCost}</p>
+                    <button>Place your Order</button>
+                    <p>Today is {date}</p>
+                    <p> Time: {time}</p>
+                    <p>Digital Live Clock</p>
+                    <p>Live time: {}</p>
+                        
+                </div>);
+                const container = document.querySelector('.js-container');
+                ReactDOM.createRoot(container).render(div);
+
+        </script>
+        
+    </body>
+</html>
