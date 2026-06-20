@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  Exercise 4 SuperSimpleDev React course
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Ex4</title>
+  <style>
+    .switch-button-on{
+      background-color: rgb(25, 135, 84);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px ;
+      color: aliceblue;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .switch-button-off{
+      background-color: rgb(220, 53, 69);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px ;
+      color: aliceblue;
+      margin-top:10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .input-mail,.input-password{
+      margin-top:10px;
+      display: auto;
+      padding-top: 8px ;
+      padding-bottom: 8px;
+      padding-left:5px;
+      
+    }
+    
+    .login-button,.signUp-button{
+      background-color: rgb(0,123,255);
+      border: none;
+      padding: 10px 15px ;
+      border-radius: 8px;
+      color: azure;
+      margin-top: 10px ;
+      margin-right: 8px;
+    }
+    
+    .show-button{
+      padding: 6px;
+      margin-left: 6px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+        <div class="js-container"></div>
+
+        <script src="https://unpkg.com/supersimpledev/react.js"></script>
+        <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+        <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+        <script type="text/babel">
+
+          function Loginform(){
+            const [showPassword,setShowPassword] = React.useState(false);
+            function toggleShowPassword(){
+              setShowPassword(!showPassword)
+            }
+            return(
+              <>
+                <div >
+                <input className="input-mail" type="text" placeholder="Email" />
+              </div>
+              <div >
+                <input className="input-password" type={showPassword ? "text" : "password"} placeholder="Password" />
+                <button
+                  className='show-button'
+                  onClick={toggleShowPassword}>
+                  {showPassword ? 'Hide' : 'Show'}
+                  </button>
+              </div>
+              <div>
+                <button className="login-button">Login </button>
+                <button className="signUp-button">Sign Up</button>
+              </div>
+              </>
+            )
+          }
+
+          function SwitchOnOff() {
+            const [isButtonOn , setisButtonOn] = React.useState(true);
+            function toggleOnOff(){
+                if(isButtonOn){
+                  setisButtonOn(false);
+                } else{
+                  setisButtonOn(true);
+                }
+              }
+              return(
+                <>
+                <button className="switch-button-on">ON</button> <br />
+                <button 
+                onClick= {toggleOnOff}
+                className="switch-button-on">
+                {isButtonOn ? 'ON' : "OFF"} 
+                </button> <br />
+                <button 
+                className= {isButtonOn ? 'switch-button-on':'switch-button-off'}
+                onClick={toggleOnOff}>
+                {isButtonOn ? 'ON' : "OFF"} 
+                </button>
+                </>
+              );
+            }
+
+
+          function App(){
+            
+            return(
+              <>         
+              <SwitchOnOff />
+              <p>Hello, Welcome to my website</p>
+              <Loginform />
+              </>
+            );
+
+          }
+            const container = document.querySelector('.js-container');
+            ReactDOM.createRoot(container).render(<App/>);
+        </script>
+  
+</body>
+</html>
+
