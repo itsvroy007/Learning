@@ -4,6 +4,8 @@ import './HomePage.css'
 export function HomePage() {
   return (
     <>
+      <title>Ecomm-Proj</title>
+      
       <div className="header">
         <div className="left-section">
           <a href="/" className="header-link">
