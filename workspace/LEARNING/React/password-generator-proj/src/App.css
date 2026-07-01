@@ -1,0 +1,22 @@
+.header{
+  color: aliceblue;
+}
+.pass-length{
+  cursor: pointer;
+}
+.copy-button{
+  background: rgb(1, 131, 244);
+  color: white;
+  padding: 8px;
+  border: none;
+}
+.pass-options{
+  color: orange;
+}
+.pass-box{
+  color:orange;
+  background:white;
+  padding: 7px;
+  border: none;
+  padding-right:100px ;
+}
