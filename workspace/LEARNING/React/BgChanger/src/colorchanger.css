@@ -1,0 +1,72 @@
+.function{
+  background-color: cyan;
+  bottom: 48px;
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.color-options{
+  bottom: 100px;
+  background: white;
+  border-radius: 10px;
+  padding:3px;
+  margin-bottom: 30px;
+}
+
+button{
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  margin-left:5px;
+}
+
+.red-button{
+  background-color: red;
+  
+}
+
+.green-button{
+  background-color: green;
+}
+
+.blue-button{
+  background-color: blue;
+}
+
+.yellow-button{
+  background-color: yellow;
+  color: black;
+}
+
+.olive-button{
+  background-color: olive;
+}
+
+.gray-button{
+  background-color: gray;
+}
+
+.pink-button{
+  background-color: pink;
+  color: black;
+}
+
+.purple-button{
+  background-color: purple;
+}
+
+.lavender-button{
+  background-color: lavender;
+  color: black;
+}
+
+.black-button{
+  background-color: black;
+}
