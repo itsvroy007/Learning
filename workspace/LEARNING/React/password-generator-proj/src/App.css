@@ -9,6 +9,7 @@
   color: white;
   padding: 8px;
   border: none;
+  border-radius: 7px;
 }
 .pass-options{
   color: orange;
@@ -16,7 +17,9 @@
 .pass-box{
   color:orange;
   background:white;
-  padding: 7px;
   border: none;
-  padding-right:100px ;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  
 }
